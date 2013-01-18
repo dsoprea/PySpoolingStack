@@ -1,14 +1,14 @@
 from setuptools import setup, find_packages
 import sys, os
 
-version = '0.1.5'
+version = '0.1.6'
 
 setup(name='pyspoolingstack',
       version=version,
-      description="A stack that will only grow to a certain point before it "
-                  "pushes to physical files, and vice-versa.",
+      description="A stack that will only grow to a certain point before "
+                  "transparently offloading data to physical files.",
       long_description="A stack that will only grow to a certain point before "
-                       "it pushes to physical files, and vice-versa. Was "
+                       "transparently offloading data to physical files. Was "
                        "developed to be used as a temporary spool for massive "
                        "amounts of incoming heirarchical data that is "
                        "received in no particular order, prior to pushing it "
