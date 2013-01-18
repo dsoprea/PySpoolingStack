@@ -1,0 +1,11 @@
+README.txt
+setup.py
+pyspoolingstack/__init__.py
+pyspoolingstack/sstack.py
+pyspoolingstack/sstackcollection.py
+pyspoolingstack.egg-info/PKG-INFO
+pyspoolingstack.egg-info/SOURCES.txt
+pyspoolingstack.egg-info/dependency_links.txt
+pyspoolingstack.egg-info/entry_points.txt
+pyspoolingstack.egg-info/top_level.txt
+pyspoolingstack.egg-info/zip-safe
