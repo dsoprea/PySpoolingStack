@@ -68,7 +68,7 @@ sized:
     -rw-rw-r-- 1 dustin dustin 18 Jan 18 02:32 stack.0
 
     $ cat /tmp/collect1/stack3/stack.0 
-    ["gg", "hh", "ii"]dustin@dustinlenovo:~/development/python/pyspoolingstack$ 
+    ["gg", "hh", "ii"]$ 
 
 Comments
 ========
