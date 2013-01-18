@@ -119,7 +119,7 @@ class SStack(object):
 
         self.flush(self.__bundle_size)
 
-    def flush(self, count=None):
+    def flush(self, count=None, skip_on_error=True):
         """Move the last stored_bundle_size-number of values to file."""
 
         # Safety.
@@ -155,7 +155,13 @@ class SStack(object):
         
         bundle_filepath = self.__get_current_bundle_filepath()    
         with file(bundle_filepath, 'w') as f:
-            self.__dump(self.__slice_buffer[0:count], f)
+            try:
+                self.__dump(self.__slice_buffer[0:count], f)
+            except Exception as e:
+                if not skip_on_error:
+                    raise TypeError("Could not serialize one or more values "
+                                    "to stack bundle [%s]: %s" % 
+                                    (bundle_filepath, e))
 
         logging.debug("Bundle written to [%s] (%d)." % (bundle_filepath, len(self.__deque)))
 

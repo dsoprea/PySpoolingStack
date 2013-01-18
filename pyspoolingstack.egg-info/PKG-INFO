@@ -1,6 +1,6 @@
 Metadata-Version: 1.1
 Name: pyspoolingstack
-Version: 0.1.6
+Version: 0.1.7
 Summary: A stack that will only grow to a certain point before transparently offloading data to physical files.
 Home-page: https://github.com/dsoprea/PySpoolingStack
 Author: Dustin Oprea
