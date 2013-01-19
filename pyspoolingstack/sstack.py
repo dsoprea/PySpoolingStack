@@ -99,8 +99,11 @@ class SStack(object):
         self.__min_bundle = None
         self.__max_bundle = None
 
-        rmtree(self.__path)
-
+        try:
+            rmtree(self.__path)
+        except:
+            pass
+        
         if exists(self.__path):
             raise Exception("Spool path [%s] still exists after reset." % 
                             (self.__path))

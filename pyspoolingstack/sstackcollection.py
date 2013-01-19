@@ -31,3 +31,9 @@ class SStackCollection(object):
         for name, stack in self.__stacks.iteritems():
             stack.flush()
 
+    def reset(self):
+        """Flush all stacks."""
+    
+        for name, stack in self.__stacks.iteritems():
+            stack.reset()
+
